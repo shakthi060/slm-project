@@ -1,0 +1,9 @@
+{
+  "supported": true,
+  "load_s": 0.921,
+  "rss_after_load_mb": 941.5,
+  "quantize_s": 1.847,
+  "rss_after_quant_mb": 1821.9,
+  "generate_s": 2.648,
+  "response": "You can return a damaged product by following these steps:\n\n1. Go to the product's website and click on \"Return\" in the \"Products\""
+}

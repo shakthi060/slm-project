@@ -1,0 +1,5 @@
+{
+  "latency_p50_ms": 0.031,
+  "latency_p95_ms": 0.064,
+  "peak_vram_mb": 0
+}

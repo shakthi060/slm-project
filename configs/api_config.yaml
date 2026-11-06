@@ -1,0 +1,43 @@
+# Phase 4 FastAPI deployment configuration.
+# Configuration A from Phase 3: pretrained SmolLM2, retrieved policy context, 256-token cap.
+# This is a local demonstration service, not a production deployment.
+
+app:
+  name: ShopEase Customer Support SLM API
+  version: 0.1.0
+  description: >-
+    Local FastAPI service for the ShopEase customer-support SLM. The selected
+    Phase 3 configuration (A) is a least-risk demonstration fallback only and is
+    not approved for production.
+  host: 127.0.0.1
+  port: 8000
+
+model:
+  id: HuggingFaceTB/SmolLM2-135M-Instruct
+  revision: 12fd25f77366fa6b3b4b768ec3050bf629380bac
+  path: D:/shakthi/slm-artifacts/models/SmolLM2-135M-Instruct
+  device: cpu
+  use_4bit: false
+  warmup: true
+  warmup_prompt: How can I return a damaged product?
+  warmup_max_new_tokens: 16
+
+generation:
+  max_new_tokens: 256
+  do_sample: false
+  temperature: 1.0
+  top_p: 1.0
+  repetition_penalty: 1.05
+  num_beams: 1
+  use_cache: true
+
+policy:
+  include_document: true
+  max_input_chars: 1000
+
+runtime:
+  threads: 6
+  interop_threads: 1
+
+metrics:
+  latency_window: 500

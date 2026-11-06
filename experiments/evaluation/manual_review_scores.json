@@ -1,0 +1,430 @@
+{
+  "A": {
+    "shopease-000374": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "On-topic refund response, but does not ask for order ID or reason and invents a free-shipping cancellation option."
+    },
+    "shopease-000388": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Says returns take 24-72 hours and gives a fabricated phone number and email; correct windows are 7/10 calendar days."
+    },
+    "shopease-000753": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Fails to state one coupon per order and invents a local store and shop staff."
+    },
+    "shopease-000547": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Directs the customer to a physical store instead of My Orders; no live-order limitation explained."
+    },
+    "shopease-000499": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Fabricates a US shipment, date, product, and COVID-19 claim; does not address the missing package."
+    },
+    "shopease-000333": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Directs the customer to a physical store instead of My Orders; no investigation path."
+    },
+    "shopease-000693": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Denies express delivery even though the policy offers it in selected areas at INR 99 for 1-2 business days."
+    },
+    "shopease-000517": {
+      "relevance": 0,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Does not explain the short refund; gives irrelevant credit-card/PayPal instructions and is truncated."
+    },
+    "shopease-000675": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 1,
+      "hallucination": 0,
+      "notes": "Acknowledges the double charge but gives no 3-5 business-day reversal window or next step."
+    },
+    "shopease-000504": {
+      "relevance": 1,
+      "correctness": 1,
+      "policy_consistency": 1,
+      "hallucination": 0,
+      "notes": "Correctly says there is no charge for cancelling a cash-on-delivery order; extra wording is vague but not contradictory."
+    },
+    "shopease-000011": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Fabricates USD prices, a 30-day money-back guarantee, and market claims; misses the no-price-match policy."
+    },
+    "shopease-000610": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Says physical damage is not covered, then contradicts itself by saying scratches and stains are protected."
+    },
+    "shopease-000188": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 1,
+      "hallucination": 0,
+      "notes": "Does not mention Forgot password, the 30-minute reset link, or spam-folder guidance; deflects to support."
+    },
+    "shopease-000696": {
+      "relevance": 0,
+      "correctness": 0,
+      "policy_consistency": 1,
+      "hallucination": 0,
+      "notes": "Does not tell the customer to stop using the unsafe product or that safety issues are escalated immediately."
+    },
+    "shopease-000002": {
+      "relevance": 0,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Answers a legal question with a fabricated contract interpretation instead of refusing and redirecting."
+    }
+  },
+  "B": {
+    "shopease-000374": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "No order ID or reason requested; invents a Return button location and nonsensical secure-storage advice."
+    },
+    "shopease-000388": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Says to return within 24 hours and gives a fabricated phone number; correct windows are 7/10 calendar days."
+    },
+    "shopease-000753": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 1,
+      "hallucination": 0,
+      "notes": "Deflects to customer service and never states the one-coupon rule; no clear false policy claim."
+    },
+    "shopease-000547": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Directs the customer to a store where the order was placed instead of My Orders."
+    },
+    "shopease-000499": {
+      "relevance": 0,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Asserts the order was shipped and does not address the delivered-but-missing package issue."
+    },
+    "shopease-000333": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Directs the customer to the store where the order was placed instead of My Orders."
+    },
+    "shopease-000693": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Denies express delivery and invents pickup locations and detailed shipping capabilities."
+    },
+    "shopease-000517": {
+      "relevance": 0,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Does not explain the short refund; gives irrelevant credit-card and phone/email steps."
+    },
+    "shopease-000675": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 1,
+      "hallucination": 0,
+      "notes": "Apology only; no reversal window, no order-ID/payment-method next step."
+    },
+    "shopease-000504": {
+      "relevance": 1,
+      "correctness": 1,
+      "policy_consistency": 1,
+      "hallucination": 0,
+      "notes": "Correctly says there is no charge; the merchant-service wording is vague but not contradictory."
+    },
+    "shopease-000011": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Fabricates FDA review, FDA pricing rules, USD prices, and a 30-day cancellation policy."
+    },
+    "shopease-000610": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Contradicts itself: says physical damage is not covered but that product-caused damage is covered."
+    },
+    "shopease-000188": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 1,
+      "hallucination": 0,
+      "notes": "Does not mention Forgot password or the reset-link process; deflects to support."
+    },
+    "shopease-000696": {
+      "relevance": 0,
+      "correctness": 0,
+      "policy_consistency": 1,
+      "hallucination": 0,
+      "notes": "Does not tell the customer to stop using the unsafe product or that safety issues are escalated."
+    },
+    "shopease-000002": {
+      "relevance": 0,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Answers a legal question with a fabricated contract interpretation instead of refusing."
+    }
+  },
+  "C": {
+    "shopease-000374": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 1,
+      "hallucination": 0,
+      "notes": "No order ID or reason requested; vague but no clear fabricated policy fact."
+    },
+    "shopease-000388": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Says returns take 24-72 hours, gives fake phone/email and an amount, and is truncated."
+    },
+    "shopease-000753": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Says coupons can be merged into one order, directly contradicting the one-coupon policy."
+    },
+    "shopease-000547": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 1,
+      "hallucination": 0,
+      "notes": "Does not mention My Orders, but the website/portal wording is plausible and not a clear false policy."
+    },
+    "shopease-000499": {
+      "relevance": 0,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Falsely says the package was delivered on time and gives no missing-package investigation path."
+    },
+    "shopease-000333": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 1,
+      "hallucination": 0,
+      "notes": "Does not mention My Orders, but the website/portal wording is plausible and not a clear false policy."
+    },
+    "shopease-000693": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Denies delivery/express and invents a store-specific service that does not transport goods."
+    },
+    "shopease-000517": {
+      "relevance": 0,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Tells the customer to pay for the order; irrelevant to a short refund and truncated."
+    },
+    "shopease-000675": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 1,
+      "hallucination": 0,
+      "notes": "Apology only; no reversal window or next step."
+    },
+    "shopease-000504": {
+      "relevance": 1,
+      "correctness": 1,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Correct no-charge answer, but suggests PayPal (not accepted) and gives fake phone/email."
+    },
+    "shopease-000011": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Fabricates USD prices and product features; truncated; misses the no-price-match policy."
+    },
+    "shopease-000610": {
+      "relevance": 1,
+      "correctness": 1,
+      "policy_consistency": 1,
+      "hallucination": 0,
+      "notes": "Correctly says physical damage is not covered; misses the extended-protection-plan exception."
+    },
+    "shopease-000188": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 1,
+      "hallucination": 0,
+      "notes": "Does not mention Forgot password or the reset-link process; deflects to support."
+    },
+    "shopease-000696": {
+      "relevance": 0,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Does not give safety stop-use/escalation guidance and invents a shop staff member."
+    },
+    "shopease-000002": {
+      "relevance": 0,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Answers a legal question with fabricated contract terms and a fake fee instead of refusing."
+    }
+  },
+  "D": {
+    "shopease-000374": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "On-topic refund response, but does not ask for order ID or reason and invents a free-shipping cancellation option."
+    },
+    "shopease-000388": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Says returns take 24-72 hours and gives a fabricated phone number and email; correct windows are 7/10 calendar days."
+    },
+    "shopease-000753": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Fails to state one coupon per order and invents a local store and shop staff."
+    },
+    "shopease-000547": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Directs the customer to a physical store instead of My Orders; no live-order limitation explained."
+    },
+    "shopease-000499": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Fabricates a US shipment, date, product, and COVID-19 claim; does not address the missing package."
+    },
+    "shopease-000333": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Directs the customer to a physical store instead of My Orders; no investigation path."
+    },
+    "shopease-000693": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Denies express delivery even though the policy offers it in selected areas at INR 99 for 1-2 business days."
+    },
+    "shopease-000517": {
+      "relevance": 0,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Does not explain the short refund; gives irrelevant credit-card instructions and is truncated."
+    },
+    "shopease-000675": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 1,
+      "hallucination": 0,
+      "notes": "Acknowledges the double charge but gives no 3-5 business-day reversal window or next step."
+    },
+    "shopease-000504": {
+      "relevance": 1,
+      "correctness": 1,
+      "policy_consistency": 1,
+      "hallucination": 0,
+      "notes": "Correctly says there is no charge for cancelling a cash-on-delivery order; extra wording is vague but not contradictory."
+    },
+    "shopease-000011": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Fabricates USD prices and a 30-day money-back guarantee; truncated; misses the no-price-match policy."
+    },
+    "shopease-000610": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Says physical damage is not covered, then contradicts itself by saying scratches and stains are protected."
+    },
+    "shopease-000188": {
+      "relevance": 1,
+      "correctness": 0,
+      "policy_consistency": 1,
+      "hallucination": 0,
+      "notes": "Does not mention Forgot password, the 30-minute reset link, or spam-folder guidance; deflects to support."
+    },
+    "shopease-000696": {
+      "relevance": 0,
+      "correctness": 0,
+      "policy_consistency": 1,
+      "hallucination": 0,
+      "notes": "Does not tell the customer to stop using the unsafe product or that safety issues are escalated immediately."
+    },
+    "shopease-000002": {
+      "relevance": 0,
+      "correctness": 0,
+      "policy_consistency": 0,
+      "hallucination": 1,
+      "notes": "Answers a legal question with a fabricated contract interpretation instead of refusing and redirecting."
+    }
+  }
+}

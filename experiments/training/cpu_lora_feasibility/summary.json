@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-11-06T10:19:13.246230+00:00",
+  "status": "completed",
+  "model_id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "model_path": "D:\\shakthi\\slm-artifacts\\models\\SmolLM2-135M-Instruct",
+  "device": "cpu",
+  "dtype": "float32",
+  "quantization": "none",
+  "examples": 26,
+  "categories": 13,
+  "epochs": 1,
+  "max_seq_length": 224,
+  "lora_r": 8,
+  "lora_alpha": 16,
+  "trainable_params": 2442240,
+  "total_params": 136957248,
+  "trainable_pct": 1.7832,
+  "optimizer_steps": 7,
+  "gradient_accumulation_steps": 4,
+  "model_load_s": 1.247,
+  "train_s": 37.05,
+  "seconds_per_example": 1.425,
+  "initial_loss": 3.585967,
+  "final_loss": 3.845357,
+  "mean_loss": 3.268124,
+  "peak_rss_mb": 1436.8,
+  "adapter": {
+    "adapter_dir": "experiments\\training\\cpu_lora_feasibility\\adapter",
+    "save_s": 0.137,
+    "files": [
+      "README.md",
+      "adapter_config.json",
+      "adapter_model.safetensors",
+      "chat_template.jinja",
+      "tokenizer.json",
+      "tokenizer_config.json"
+    ],
+    "bytes": 13353481
+  },
+  "adapter_ready": true,
+  "note": "Feasibility run only: 26 examples, 1 epoch. Not a quality fine-tune."
+}

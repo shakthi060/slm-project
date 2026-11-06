@@ -1,0 +1,10 @@
+{
+  "generated_at": "2026-11-05T05:36:42.066318+00:00",
+  "backend": "rule_based_smoke",
+  "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+  "model_loaded": false,
+  "seed": 42,
+  "test_file": "data\\test.jsonl",
+  "examples": 75,
+  "note": "Smoke baseline for pipeline validation; not the pretrained model baseline."
+}

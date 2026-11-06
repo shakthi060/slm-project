@@ -1,0 +1,54 @@
+# Phase 2 CPU inference optimization benchmark.
+# The five prompts are taken from the frozen test set via the existing
+# baseline prompt artifact; the test dataset and baseline artifacts are read-only.
+
+seed: 42
+
+paths:
+  model: D:/shakthi/slm-artifacts/models/SmolLM2-135M-Instruct
+  adapter: experiments/training/cpu_lora_feasibility/adapter
+  test_file: data/test.jsonl
+  baseline_prompts: experiments/baseline_generative/prompts.jsonl
+  output_dir: experiments/optimization
+
+prompts:
+  limit: 5
+  # Same rules and categories as the full system prompt, but shorter.
+  # Full prompt: 131 tokens. Compact prompt: 90 tokens.
+  compact_system_prompt: >-
+    You are the ShopEase Customer Support Assistant. Help only with ShopEase orders, shipping,
+    cancellations, returns, refunds, payments, product information, warranty, accounts, complaints,
+    and general FAQs. Use only ShopEase policy. Never invent order details, dates, amounts, or
+    policies. Ask one concise question if a required detail such as an order ID is missing.
+    Politely refuse unrelated requests. Be concise and professional.
+
+runtime:
+  device: cpu
+  dtype: float32
+  threads: 6
+  interop_threads: 1
+  # Replicates the original baseline warmup protocol: first two records are
+  # generated once before the five measured responses.
+  warmup_runs: 2
+
+generation:
+  original:
+    max_new_tokens: 256
+    do_sample: false
+    temperature: 1.0
+    top_p: 1.0
+    repetition_penalty: 1.05
+    batch_size: 1
+    num_beams: 1
+    use_cache: true
+  optimized:
+    # The original outputs were 14-152 new tokens. 128 is a concise support
+    # answer cap; any truncation is reported explicitly.
+    max_new_tokens: 128
+    do_sample: false
+    temperature: 1.0
+    top_p: 1.0
+    repetition_penalty: 1.05
+    batch_size: 1
+    num_beams: 1
+    use_cache: true

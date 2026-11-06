@@ -1,0 +1,132 @@
+[
+  {
+    "id": "shopease-000525",
+    "category": "account",
+    "tokens": 190
+  },
+  {
+    "id": "shopease-000552",
+    "category": "account",
+    "tokens": 191
+  },
+  {
+    "id": "shopease-000123",
+    "category": "cancellations",
+    "tokens": 184
+  },
+  {
+    "id": "shopease-000352",
+    "category": "cancellations",
+    "tokens": 185
+  },
+  {
+    "id": "shopease-000472",
+    "category": "clarification",
+    "tokens": 182
+  },
+  {
+    "id": "shopease-000493",
+    "category": "clarification",
+    "tokens": 182
+  },
+  {
+    "id": "shopease-000121",
+    "category": "complaints",
+    "tokens": 189
+  },
+  {
+    "id": "shopease-000379",
+    "category": "complaints",
+    "tokens": 190
+  },
+  {
+    "id": "shopease-000327",
+    "category": "general_faq",
+    "tokens": 185
+  },
+  {
+    "id": "shopease-000260",
+    "category": "general_faq",
+    "tokens": 186
+  },
+  {
+    "id": "shopease-000181",
+    "category": "order_status",
+    "tokens": 216
+  },
+  {
+    "id": "shopease-000222",
+    "category": "order_status",
+    "tokens": 216
+  },
+  {
+    "id": "shopease-000368",
+    "category": "out_of_scope",
+    "tokens": 190
+  },
+  {
+    "id": "shopease-000797",
+    "category": "out_of_scope",
+    "tokens": 190
+  },
+  {
+    "id": "shopease-000184",
+    "category": "payments",
+    "tokens": 187
+  },
+  {
+    "id": "shopease-000436",
+    "category": "payments",
+    "tokens": 190
+  },
+  {
+    "id": "shopease-000784",
+    "category": "product_info",
+    "tokens": 191
+  },
+  {
+    "id": "shopease-000730",
+    "category": "product_info",
+    "tokens": 193
+  },
+  {
+    "id": "shopease-000681",
+    "category": "refunds",
+    "tokens": 201
+  },
+  {
+    "id": "shopease-000426",
+    "category": "refunds",
+    "tokens": 202
+  },
+  {
+    "id": "shopease-000386",
+    "category": "returns",
+    "tokens": 199
+  },
+  {
+    "id": "shopease-000423",
+    "category": "returns",
+    "tokens": 199
+  },
+  {
+    "id": "shopease-000258",
+    "category": "shipping",
+    "tokens": 176
+  },
+  {
+    "id": "shopease-000508",
+    "category": "shipping",
+    "tokens": 176
+  },
+  {
+    "id": "shopease-000122",
+    "category": "warranty",
+    "tokens": 191
+  },
+  {
+    "id": "shopease-000355",
+    "category": "warranty",
+    "tokens": 193
+  }
+]

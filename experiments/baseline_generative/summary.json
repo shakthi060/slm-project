@@ -1,0 +1,13 @@
+{
+  "examples": 75,
+  "category_tag_rate": 0.0,
+  "category_accuracy": 0.0,
+  "response_validity_rate": 0.0,
+  "unsupported_refusal_rate": 0.1429,
+  "policy_keyword_coverage": 0.4,
+  "clarification_rate": 0.0,
+  "latency_p50_ms": 4163.007,
+  "latency_p95_ms": 12490.952,
+  "peak_vram_mb": 0,
+  "model_load_s": 13.981
+}

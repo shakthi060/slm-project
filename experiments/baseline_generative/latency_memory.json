@@ -1,0 +1,6 @@
+{
+  "model_load_s": 13.981,
+  "latency_p50_ms": 4163.007,
+  "latency_p95_ms": 12490.952,
+  "peak_vram_mb": 0
+}

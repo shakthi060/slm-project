@@ -1,0 +1,20 @@
+INFO:     Started server process [788]
+INFO:     Waiting for application startup.
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights:  90%|######### | 246/272 [00:00<00:00, 2430.45it/s]Loading weights: 100%|##########| 272/272 [00:00<00:00, 2381.60it/s]
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:50736 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50736 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50736 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50736 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50736 - "GET /ui HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50736 - "GET /metrics HTTP/1.1" 200 OK
+Serving safe fallback for category=returns reason=repetitive_output:repeated_list_items,repeated_sentences,repeated_phrases
+INFO:     127.0.0.1:50736 - "POST /chat HTTP/1.1" 200 OK
+Serving safe fallback for category=returns reason=repetitive_output:repeated_phrases
+INFO:     127.0.0.1:50736 - "POST /chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50736 - "POST /chat HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:50736 - "POST /chat HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:50736 - "POST /chat HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:50736 - "POST /chat HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:50736 - "GET /metrics HTTP/1.1" 200 OK

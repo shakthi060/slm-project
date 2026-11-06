@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-11-06T09:56:00.923457+00:00",
+  "backend": "transformers_pretrained",
+  "baseline_type": "generative_slm",
+  "model_id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "revision": "local_checkpoint",
+  "model_path": "D:\\shakthi\\slm-artifacts\\models\\SmolLM2-135M-Instruct",
+  "quantization": "none",
+  "dtype": "float32",
+  "device": "cpu",
+  "gpu": null,
+  "torch": "2.13.0+cpu",
+  "transformers": "5.16.1",
+  "cuda_available": false,
+  "seed": 42,
+  "test_file": "data/test.jsonl",
+  "examples": 75,
+  "generation": {
+    "max_new_tokens": 256,
+    "do_sample": false,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "repetition_penalty": 1.05,
+    "batch_size": 1
+  },
+  "note": "Pretrained SmolLM2-135M-Instruct, no fine-tuning. Test set frozen."
+}

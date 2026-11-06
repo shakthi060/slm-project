@@ -1,0 +1,102 @@
+{
+  "generated_at": "2026-11-05T11:52:18.530579+00:00",
+  "description": "Same-process check: base model loaded once, A/C/C1/C2 interleaved, two passes with reversed order. Complements the standalone runs.",
+  "load": {
+    "tokenizer_load_s": 1.245,
+    "base_load_s": 1.089,
+    "adapter_apply_s": 0.0,
+    "quantize_s": 0.0,
+    "model_load_s": 2.334,
+    "rss_before_load_mb": 417.0,
+    "rss_after_load_mb": 942.2,
+    "rss_after_quant_mb": null,
+    "adapter_loaded": false,
+    "adapter_dir": null,
+    "quantization": "none",
+    "dtype": "float32",
+    "device": "cpu"
+  },
+  "prompts": [
+    "shopease-000374",
+    "shopease-000388",
+    "shopease-000753",
+    "shopease-000547",
+    "shopease-000499"
+  ],
+  "conditions": {
+    "A": {
+      "label": "A_pretrained_original",
+      "measurements": 10,
+      "latency_p50_ms": 4343.785,
+      "latency_p95_ms": 6828.754,
+      "latency_mean_ms": 4647.302,
+      "latency_min_ms": 2681.257,
+      "latency_max_ms": 6828.754,
+      "total_request_p50_ms": 4344.533,
+      "total_request_p95_ms": 6829.779,
+      "output_tokens_mean": 93.8,
+      "truncation_rate": 0.0
+    },
+    "C": {
+      "label": "C_pretrained_optimized",
+      "measurements": 10,
+      "latency_p50_ms": 2698.005,
+      "latency_p95_ms": 6367.203,
+      "latency_mean_ms": 3518.784,
+      "latency_min_ms": 2393.05,
+      "latency_max_ms": 6367.203,
+      "total_request_p50_ms": 2698.73,
+      "total_request_p95_ms": 6368.061,
+      "output_tokens_mean": 72.2,
+      "truncation_rate": 0.2
+    },
+    "C1": {
+      "label": "C1_full_prompt_capped",
+      "measurements": 10,
+      "latency_p50_ms": 4425.172,
+      "latency_p95_ms": 6264.301,
+      "latency_mean_ms": 4568.72,
+      "latency_min_ms": 2655.087,
+      "latency_max_ms": 6264.301,
+      "total_request_p50_ms": 4426.251,
+      "total_request_p95_ms": 6265.445,
+      "output_tokens_mean": 92.6,
+      "truncation_rate": 0.2
+    },
+    "C2": {
+      "label": "C2_compact_prompt_uncapped",
+      "measurements": 10,
+      "latency_p50_ms": 2721.512,
+      "latency_p95_ms": 6575.83,
+      "latency_mean_ms": 3648.81,
+      "latency_min_ms": 2401.283,
+      "latency_max_ms": 6575.83,
+      "total_request_p50_ms": 2722.4,
+      "total_request_p95_ms": 6576.668,
+      "output_tokens_mean": 74,
+      "truncation_rate": 0.0
+    }
+  },
+  "paired_deltas": {
+    "C_minus_A": {
+      "median_delta_ms": -611.858,
+      "mean_delta_ms": -1128.517,
+      "measurements": 10
+    },
+    "C1_minus_A": {
+      "median_delta_ms": -17.432,
+      "mean_delta_ms": -78.582,
+      "measurements": 10
+    },
+    "C2_minus_A": {
+      "median_delta_ms": -437.469,
+      "mean_delta_ms": -998.492,
+      "measurements": 10
+    }
+  },
+  "limitations": [
+    "Ten measurements per condition (two passes over five prompts).",
+    "Order was balanced across two passes but CPU frequency still varies.",
+    "This is a latency check, not a quality evaluation."
+  ]
+}

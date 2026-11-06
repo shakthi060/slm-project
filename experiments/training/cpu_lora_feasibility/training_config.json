@@ -1,0 +1,47 @@
+{
+  "seed": 42,
+  "model": {
+    "id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "path": "D:\\shakthi\\slm-artifacts\\models\\SmolLM2-135M-Instruct"
+  },
+  "data": {
+    "train_file": "data/train.jsonl",
+    "examples_per_category": 2,
+    "max_seq_length": 224
+  },
+  "lora": {
+    "r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "bias": "none",
+    "task_type": "CAUSAL_LM",
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "training": {
+    "epochs": 1,
+    "batch_size": 1,
+    "gradient_accumulation_steps": 4,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.01,
+    "max_grad_norm": 1.0,
+    "optimizer": "adamw",
+    "device": "cpu",
+    "dtype": "float32",
+    "num_threads": 6,
+    "logging_steps": 1,
+    "output_dir": "experiments/training/cpu_lora_feasibility"
+  },
+  "evaluation": {
+    "config": "configs/evaluation_config.yaml",
+    "limit": 5,
+    "output_name": "adapter_inference"
+  }
+}

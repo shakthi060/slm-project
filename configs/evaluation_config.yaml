@@ -1,0 +1,52 @@
+# Evaluation is run on the fixed held-out test set only.
+# Test data is never used for training or hyperparameter selection.
+
+seed: 42
+
+data:
+  test_file: data/test.jsonl
+  messages_field: messages
+
+artifacts:
+  baseline_dir: experiments/baseline
+  adapted_dir: experiments/optimized
+  reports_dir: reports
+
+generation:
+  max_new_tokens: 256
+  do_sample: false
+  temperature: 1.0
+  top_p: 1.0
+  repetition_penalty: 1.05
+  batch_size: 1
+
+latency:
+  warmup_runs: 2
+  measured_runs: 5
+
+automatic_metrics:
+  - category_accuracy
+  - response_validity_rate
+  - unsupported_refusal_rate
+  - policy_keyword_coverage
+  - clarification_rate
+  - latency_p50_ms
+  - latency_p95_ms
+  - peak_vram_mb
+
+human_rubric:
+  relevance:
+    scale: "1-5"
+    description: "Does the answer address the customer's actual question?"
+  correctness:
+    scale: "1-5"
+    description: "Is the answer factually consistent with ShopEase policies?"
+  policy_consistency:
+    scale: "1-5"
+    description: "Does the answer avoid inventing policies, amounts, or order facts?"
+  tone_professionalism:
+    scale: "1-5"
+    description: "Is the answer polite, clear, and professional?"
+  hallucination:
+    scale: "0-2"
+    description: "0 = fabricated claim, 1 = uncertain, 2 = no unsupported claim"

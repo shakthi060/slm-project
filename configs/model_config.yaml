@@ -1,0 +1,71 @@
+# Active SLM (approved Phase 3 pivot): SmolLM2-135M-Instruct
+# Facts verified from the local config.json and safetensors header on 2026-11-05.
+# The Phase 1 Qwen2.5-1.5B research is retained in reports/model_comparison.md.
+
+model:
+  id: HuggingFaceTB/SmolLM2-135M-Instruct
+  revision: 12fd25f77366fa6b3b4b768ec3050bf629380bac
+  local_path: D:\shakthi\slm-artifacts\models\SmolLM2-135M-Instruct
+  architecture: LlamaForCausalLM
+  parameter_count: "134.5M"
+  context_length: 8192
+  license: apache-2.0
+  torch_dtype: bfloat16
+  device: cuda
+  trust_remote_code: false
+
+tokenizer:
+  source: tokenizer
+  padding_side: right
+  pad_token: "<|im_end|>"
+  eos_token: "<|im_end|>"
+
+quantization:
+  enabled: true
+  load_in_4bit: true
+  quant_type: nf4
+  use_double_quant: true
+  compute_dtype: bfloat16
+
+generation:
+  max_new_tokens: 256
+  do_sample: false
+  temperature: 1.0
+  top_p: 1.0
+  repetition_penalty: 1.05
+  batch_size: 1
+
+support:
+  company: ShopEase
+  assistant_name: ShopEase Support Assistant
+  max_input_chars: 1000
+  categories:
+    - order_status
+    - shipping
+    - returns
+    - refunds
+    - payments
+    - cancellations
+    - product_info
+    - warranty
+    - account
+    - complaints
+    - general_faq
+    - clarification
+    - out_of_scope
+  system_prompt: >-
+    You are the ShopEase Customer Support Assistant. You help customers with
+    order status, shipping and delivery, cancellations, returns, refunds,
+    payments, product information, warranty, account issues, complaints, and
+    general ShopEase FAQs. Use only the ShopEase policies and facts provided to
+    you. Never invent order details, delivery dates, refund amounts, policies,
+    or account information. If required details are missing (for example an
+    order ID), ask one concise clarifying question. If a request is unrelated to
+    ShopEase customer support, politely say that you can only help with ShopEase
+    support topics. Be concise, professional, and empathetic.
+
+paths:
+  baseline_dir: experiments/baseline
+  training_dir: experiments/training
+  optimized_dir: experiments/optimized
+  lora_adapter_dir: experiments/training/lora_adapter

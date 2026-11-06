@@ -1,0 +1,207 @@
+{
+  "generated_at": "2026-11-06T06:38:42.140481+00:00",
+  "base_url": "http://127.0.0.1:8000",
+  "server_command": "C:\\Users\\shakthi\\AppData\\Local\\Programs\\Python\\Python310\\python.exe -m uvicorn src.api.main:app --host 127.0.0.1 --port 8000",
+  "startup_health": {
+    "status": "ok",
+    "model_loaded": true,
+    "model_id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "device": "cpu",
+    "model_load_seconds": 10.745,
+    "model_error": null,
+    "uptime_seconds": 15.329
+  },
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/",
+      "status_code": 200,
+      "elapsed_ms": 3.48,
+      "body": {
+        "name": "ShopEase Customer Support SLM API",
+        "description": "Local FastAPI service for the ShopEase customer-support SLM. The selected Phase 3 configuration (A) is a least-risk demonstration fallback only and is not approved for production.",
+        "status": "ok",
+        "version": "0.1.0",
+        "docs_url": "/docs",
+        "chat_ui_url": "/ui"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status_code": 200,
+      "elapsed_ms": 2.181,
+      "body": {
+        "status": "ok",
+        "model_loaded": true,
+        "model_id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "device": "cpu",
+        "model_load_seconds": 10.745,
+        "model_error": null,
+        "uptime_seconds": 15.344
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/docs",
+      "status_code": 200,
+      "elapsed_ms": 1.496,
+      "body": "\n    <!DOCTYPE html>\n    <html>\n    <head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css\">\n    <link rel=\"shortcut icon\" href=\"https://fastapi.tiangolo.com/img/favicon.png\">\n    <title>ShopEase Customer Support SLM API - Swagger UI</title>\n    </head>\n    <body>\n    <div id=\"swagger-ui\">\n    </div>\n    <script src=\"https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js\"></script>\n    <!-- `SwaggerUIBundle` is now available on the page -->\n    <script>\n    const ui = SwaggerUIBundle({\n        url: '/openapi.json',\n    \"dom_id\": \"#swagger-ui\",\n\"layout\": \"BaseLayout\",\n\"deepLinking\": true,\n\"showExtensions\": true,\n\"showCommonExtensions\": true,\noauth2RedirectUrl: window.location.origin + '/docs/oauth2-redirect',\n    presets: [\n        SwaggerUIBundle.presets.apis,\n        SwaggerUIBundle.SwaggerUIStandalonePreset\n        ],\n    })\n    </script>\n    </body>\n    </html>\n    "
+    },
+    {
+      "method": "GET",
+      "path": "/ui",
+      "status_code": 200,
+      "elapsed_ms": 59.683,
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>ShopEase Support SLM</title>\n  <style>\n    :root {\n      color-scheme: light;\n      --bg: #f4f7fb;\n      --panel: #ffffff;\n      --ink: #172033;\n      --muted: #61708a;\n      --line: #dbe3ef;\n      --brand: #1f5eff;\n      --brand-dark: #1748c7;\n      --user: #e8f0ff;\n      --assistant: #f7f9fc;\n      --error: #a92323;\n      --error-bg: #fff0f0;\n    }\n    * { box-sizing: border-box; }\n    body {\n      margin: 0;\n      min-height: 100vh;\n      font-family: \"Segoe UI\", Arial, sans-serif;\n      background: linear-gradient(160deg, #eef4ff 0%, var(--bg) 55%, #f8fbff 100%);\n      color: var(--ink);\n      display: grid;\n      place-items: center;\n      padding: 20px;\n    }\n    .shell {\n      width: min(860px, 100%);\n      height: min(760px, calc(100vh - 40px));\n      display: grid;\n      grid-template-rows: auto 1fr auto;\n      background: var(--panel);\n      border: 1px solid var(--line);\n      border-radius: 18px;\n      box-shadow: 0 18px 50px rgba(29, 47, 88, 0.12);\n      overflow: hidden;\n    }\n    header {\n      padding: 18px 22px;\n      border-bottom: 1px solid var(--line);\n      display: flex;\n      align-items: center;\n      justify-content: space-between;\n      gap: 16px;\n    }\n    h1 { margin: 0; font-size: 1.08rem; letter-spacing: -0.01em; }\n    .subtitle { margin: 4px 0 0; color: var(--muted); font-size: 0.82rem; }\n    button {\n      font: inherit;\n      border: 0;\n      cursor: pointer;\n      border-radius: 10px;\n      transition: background 120ms ease, opacity 120ms ease;\n    }\n    #clear-button {\n      padding: 9px 13px;\n      color: var(--muted);\n      background: #eef2f8;\n      white-space: nowrap;\n    }\n    #clear-button:hover { background: #e2e8f2; }\n    #messages {\n      overflow-y: auto;\n      padding: 22px;\n      display: flex;\n      flex-direction: column;\n      gap: 14px;\n      scroll-behavior: smooth;\n    }\n    .message {\n      max-width: 82%;\n      padding: 12px 14px;\n      border-radius: 14px;\n      line-height: 1.45;\n      white-space: pre-wrap;\n      overflow-wrap: anywhere;\n      border: 1px solid transparent;\n    }\n    .message.user {\n      align-self: flex-end;\n      background: var(--user);\n      border-color: #d4e2ff;\n    }\n    .message.assistant {\n      align-self: flex-start;\n      background: var(--assistant);\n      border-color: var(--line);\n    }\n    .meta {\n      display: block;\n      margin-top: 7px;\n      color: var(--muted);\n      font-size: 0.72rem;\n    }\n    .message.error {\n      align-self: stretch;\n      max-width: 100%;\n      color: var(--error);\n      background: var(--error-bg);\n      border-color: #ffc9c9;\n      font-size: 0.9rem;\n    }\n    .loading {\n      align-self: flex-start;\n      color: var(--muted);\n      font-size: 0.86rem;\n      padding: 2px 4px;\n    }\n    .loading::after {\n      content: \"\";\n      display: inline-block;\n      width: 1.2em;\n      text-align: left;\n      animation: dots 1.2s steps(4, end) infinite;\n    }\n    @keyframes dots {\n      0% { content: \"\"; }\n      25% { content: \".\"; }\n      50% { content: \"..\"; }\n      75% { content: \"...\"; }\n      100% { content: \"\"; }\n    }\n    form {\n      display: flex;\n      gap: 10px;\n      padding: 16px;\n      border-top: 1px solid var(--line);\n      background: #fbfcff;\n    }\n    textarea {\n      flex: 1;\n      resize: none;\n      min-height: 48px;\n      max-height: 150px;\n      padding: 12px 13px;\n      font: inherit;\n      color: var(--ink);\n      background: #ffffff;\n      border: 1px solid var(--line);\n      border-radius: 12px;\n      outline: none;\n    }\n    textarea:focus {\n      border-color: var(--brand);\n      box-shadow: 0 0 0 3px rgba(31, 94, 255, 0.12);\n    }\n    #send-button {\n      min-width: 88px;\n      padding: 0 18px;\n      color: #ffffff;\n      background: var(--brand);\n      font-weight: 600;\n    }\n    #send-button:hover { background: var(--brand-dark); }\n    #s"
+    },
+    {
+      "method": "GET",
+      "path": "/metrics",
+      "status_code": 200,
+      "elapsed_ms": 2.273,
+      "body": {
+        "total_requests": 0,
+        "successful_requests": 0,
+        "failed_requests": 0,
+        "average_latency_ms": 0.0,
+        "p50_latency_ms": 0.0,
+        "p95_latency_ms": 0.0,
+        "latency_samples": 0
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/chat",
+      "status_code": 200,
+      "elapsed_ms": 15408.909,
+      "body": {
+        "answer": "I could not produce a reliable answer from the ShopEase policy. Please rephrase your question or contact ShopEase support for help.",
+        "category": "returns",
+        "status": "success",
+        "latency_ms": 15401.508,
+        "fallback_used": true,
+        "fallback_reason": "repetitive_output:repeated_list_items,repeated_sentences,repeated_phrases"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/chat",
+      "status_code": 200,
+      "elapsed_ms": 11026.154,
+      "body": {
+        "answer": "I could not produce a reliable answer from the ShopEase policy. Please rephrase your question or contact ShopEase support for help.",
+        "category": "returns",
+        "status": "success",
+        "latency_ms": 11019.962,
+        "fallback_used": true,
+        "fallback_reason": "repetitive_output:repeated_phrases"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/chat",
+      "status_code": 422,
+      "elapsed_ms": 1.588,
+      "body": {
+        "status": "error",
+        "error": "invalid_request",
+        "detail": [
+          {
+            "location": [
+              "body",
+              "message"
+            ],
+            "message": "Value error, message must not be empty or whitespace-only",
+            "type": "value_error"
+          }
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/chat",
+      "status_code": 422,
+      "elapsed_ms": 1.347,
+      "body": {
+        "status": "error",
+        "error": "invalid_request",
+        "detail": [
+          {
+            "location": [
+              "body",
+              "message"
+            ],
+            "message": "Value error, message must not be empty or whitespace-only",
+            "type": "value_error"
+          }
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/chat",
+      "status_code": 422,
+      "elapsed_ms": 1.217,
+      "body": {
+        "status": "error",
+        "error": "invalid_request",
+        "detail": [
+          {
+            "location": [
+              "body",
+              "message"
+            ],
+            "message": "Value error, message must be at most 1000 characters",
+            "type": "value_error"
+          }
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/chat",
+      "status_code": 422,
+      "elapsed_ms": 1.284,
+      "body": {
+        "status": "error",
+        "error": "invalid_request",
+        "detail": [
+          {
+            "location": [
+              "body",
+              1
+            ],
+            "message": "JSON decode error",
+            "type": "json_invalid"
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/metrics",
+      "status_code": 200,
+      "elapsed_ms": 1.744,
+      "body": {
+        "total_requests": 6,
+        "successful_requests": 2,
+        "failed_requests": 4,
+        "average_latency_ms": 13210.735,
+        "p50_latency_ms": 11019.962,
+        "p95_latency_ms": 15401.508,
+        "latency_samples": 2
+      }
+    }
+  ],
+  "final_metrics": {
+    "total_requests": 6,
+    "successful_requests": 2,
+    "failed_requests": 4,
+    "average_latency_ms": 13210.735,
+    "p50_latency_ms": 11019.962,
+    "p95_latency_ms": 15401.508,
+    "latency_samples": 2
+  },
+  "server_log": "C:\\Users\\shakthi\\OneDrive\\Desktop\\SLM-project\\experiments\\deployment\\server.log"
+}

@@ -1,0 +1,23 @@
+{
+  "examples": 5,
+  "category_tag_rate": 0.0,
+  "category_accuracy": 0.0,
+  "response_validity_rate": 0.0,
+  "unsupported_refusal_rate": 0.0,
+  "policy_keyword_coverage": 0.4,
+  "clarification_rate": 0.0,
+  "latency_p50_ms": 4465.225,
+  "latency_p95_ms": 11346.9,
+  "peak_vram_mb": 0,
+  "adapter_dir": "experiments\\training\\cpu_lora_feasibility\\adapter",
+  "adapter_loaded": true,
+  "adapter_weights": "experiments\\training\\cpu_lora_feasibility\\adapter\\adapter_model.safetensors",
+  "generation": {
+    "max_new_tokens": 256,
+    "do_sample": false,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "repetition_penalty": 1.05,
+    "batch_size": 1
+  }
+}

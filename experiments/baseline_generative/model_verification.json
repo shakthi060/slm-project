@@ -1,0 +1,54 @@
+{
+  "repo_id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+  "path": "D:\\shakthi\\slm-artifacts\\models\\SmolLM2-135M-Instruct",
+  "required_files": {
+    "config.json": {
+      "exists": true,
+      "bytes": 861
+    },
+    "generation_config.json": {
+      "exists": true,
+      "bytes": 132
+    },
+    "model.safetensors": {
+      "exists": true,
+      "bytes": 269060552
+    },
+    "tokenizer.json": {
+      "exists": true,
+      "bytes": 2104556
+    },
+    "tokenizer_config.json": {
+      "exists": true,
+      "bytes": 3764
+    },
+    "special_tokens_map.json": {
+      "exists": true,
+      "bytes": 655
+    },
+    "vocab.json": {
+      "exists": true,
+      "bytes": 800662
+    },
+    "merges.txt": {
+      "exists": true,
+      "bytes": 466391
+    }
+  },
+  "all_required_present": true,
+  "safetensors": {
+    "tensor_count": 272,
+    "header_bytes": 30528,
+    "expected_total_bytes": 269060552,
+    "actual_bytes": 269060552,
+    "complete": true,
+    "sha256": "5af571cbf074e6d21a03528d2330792e532ca608f24ac70a143f6b369968ab8c"
+  },
+  "params_from_config": {
+    "hidden_size": 576,
+    "layers": 30,
+    "vocab_size": 49152
+  },
+  "note": "Verification executed after resuming an incomplete download; model.safetensors was truncated at 89,751,552 bytes before completion."
+}

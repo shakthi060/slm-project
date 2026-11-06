@@ -1,0 +1,118 @@
+# Phase 3 final evaluation on the frozen 75-example held-out test set.
+# The test file is read only; no examples are changed or regenerated.
+
+seed: 42
+
+paths:
+  model: D:/shakthi/slm-artifacts/models/SmolLM2-135M-Instruct
+  adapter: experiments/training/cpu_lora_feasibility/adapter
+  test_file: data/test.jsonl
+  output_dir: experiments/evaluation
+  predictions_dir: experiments/evaluation/predictions
+
+runtime:
+  device: cpu
+  dtype: float32
+  threads: 6
+  interop_threads: 1
+  warmup_prompts:
+    - "How can I check my order status?"
+    - "What is your return policy?"
+  warmup_max_new_tokens: 16
+
+prompts:
+  compact_system_prompt: >-
+    You are the ShopEase Customer Support Assistant. Help only with ShopEase orders, shipping,
+    cancellations, returns, refunds, payments, product information, warranty, accounts, complaints,
+    and general FAQs. Use only ShopEase policy. Never invent order details, dates, amounts, or
+    policies. Ask one concise question if a required detail such as an order ID is missing.
+    Politely refuse unrelated requests. Be concise and professional.
+
+generation:
+  original:
+    max_new_tokens: 256
+    do_sample: false
+    temperature: 1.0
+    top_p: 1.0
+    repetition_penalty: 1.05
+    num_beams: 1
+    use_cache: true
+  optimized:
+    max_new_tokens: 128
+    do_sample: false
+    temperature: 1.0
+    top_p: 1.0
+    repetition_penalty: 1.05
+    num_beams: 1
+    use_cache: true
+  quality:
+    max_new_tokens: 160
+    do_sample: false
+    temperature: 1.0
+    top_p: 1.0
+    repetition_penalty: 1.05
+    num_beams: 1
+    use_cache: true
+
+configs:
+  A:
+    label: A_pretrained_original
+    adapter: false
+    prompt: full
+    generation: original
+    description: Pretrained SmolLM2, full policy prompt, 256-token cap.
+  B:
+    label: B_lora_adapter_original
+    adapter: true
+    prompt: full
+    generation: original
+    description: Phase 1 LoRA adapter, full policy prompt, 256-token cap.
+  C:
+    label: C_compact_optimized
+    adapter: false
+    prompt: compact
+    generation: optimized
+    description: Pretrained SmolLM2, compact prompt, 128-token cap.
+  D:
+    label: D_full_prompt_160
+    adapter: false
+    prompt: full
+    generation: quality
+    description: Pretrained SmolLM2, full policy prompt, 160-token cap.
+
+selection:
+  # Least-risk demo fallback only; no configuration is production-ready.
+  config: A
+  rationale: >-
+    No configuration is approved for production. All four failed every one of the
+    seven out-of-scope test requests, produced no category tags, and scored only
+    1-2 of 15 on manual correctness. Configuration A is selected only as the
+    least-risk demo fallback because it has the highest response validity among
+    the non-adapter configurations (0.9067), the lowest truncation among the
+    full-prompt variants (0.0933), and does not depend on the 26-example LoRA
+    adapter. B has slightly higher validity (0.9333) and lower truncation
+    (0.0667), but its p95 latency is 19.5 s and adapter generalisation is
+    unproven. C is fastest (p50 4103 ms, p95 7842 ms) but truncates 28% of
+    responses and has validity 0.72. D reduces p95 versus A but has validity
+    0.7867 and truncation 0.2133. A is a demo fallback, not a production
+    recommendation: it still fails out-of-scope handling and most substantive
+    policy checks.
+
+manual_review:
+  # 15 examples covering all 13 categories, including the five Phase 2 prompts.
+  sample_ids:
+    - shopease-000374
+    - shopease-000388
+    - shopease-000753
+    - shopease-000547
+    - shopease-000499
+    - shopease-000333
+    - shopease-000693
+    - shopease-000517
+    - shopease-000675
+    - shopease-000504
+    - shopease-000011
+    - shopease-000610
+    - shopease-000188
+    - shopease-000696
+    - shopease-000002
