@@ -1,0 +1,85 @@
+{
+  "overall_status": "PASS",
+  "files": [
+    {
+      "records": 820,
+      "error_count": 0,
+      "errors": [],
+      "duplicate_ids": 0,
+      "duplicate_user_texts": 0,
+      "system_prompts": 1,
+      "missing_categories": [],
+      "status": "PASS",
+      "file": "data\\raw\\shopease_raw.jsonl",
+      "parse_errors": []
+    },
+    {
+      "records": 804,
+      "error_count": 0,
+      "errors": [],
+      "duplicate_ids": 0,
+      "duplicate_user_texts": 0,
+      "system_prompts": 1,
+      "missing_categories": [],
+      "status": "PASS",
+      "file": "data\\processed\\shopease_clean.jsonl",
+      "parse_errors": []
+    },
+    {
+      "records": 654,
+      "error_count": 0,
+      "errors": [],
+      "duplicate_ids": 0,
+      "duplicate_user_texts": 0,
+      "system_prompts": 1,
+      "missing_categories": [],
+      "status": "PASS",
+      "file": "data\\train.jsonl",
+      "parse_errors": []
+    },
+    {
+      "records": 75,
+      "error_count": 0,
+      "errors": [],
+      "duplicate_ids": 0,
+      "duplicate_user_texts": 0,
+      "system_prompts": 1,
+      "missing_categories": [],
+      "status": "PASS",
+      "file": "data\\validation.jsonl",
+      "parse_errors": []
+    },
+    {
+      "records": 75,
+      "error_count": 0,
+      "errors": [],
+      "duplicate_ids": 0,
+      "duplicate_user_texts": 0,
+      "system_prompts": 1,
+      "missing_categories": [],
+      "status": "PASS",
+      "file": "data\\test.jsonl",
+      "parse_errors": []
+    }
+  ],
+  "split_leakage": {
+    "near_duplicate_threshold": 0.92,
+    "id_overlap": {
+      "train_validation": [],
+      "train_test": [],
+      "validation_test": []
+    },
+    "exact_user_text_overlap": {
+      "train_validation": 0,
+      "train_test": 0,
+      "validation_test": 0
+    },
+    "near_duplicate_cross_split_pairs": {
+      "train_validation": 0,
+      "train_test": 0,
+      "validation_test": 0
+    },
+    "max_cross_split_jaccard": 0.8889,
+    "passed": true
+  }
+}

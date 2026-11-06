@@ -1,0 +1,268 @@
+{
+  "generated_at": "2026-11-05T10:40:43",
+  "seed": 42,
+  "input_file": "data\\processed\\shopease_clean.jsonl",
+  "total_records": 804,
+  "splits": {
+    "train": {
+      "count": 654,
+      "categories": {
+        "account": 41,
+        "cancellations": 44,
+        "clarification": 69,
+        "complaints": 35,
+        "general_faq": 48,
+        "order_status": 56,
+        "out_of_scope": 64,
+        "payments": 48,
+        "product_info": 45,
+        "refunds": 52,
+        "returns": 55,
+        "shipping": 57,
+        "warranty": 40
+      }
+    },
+    "validation": {
+      "count": 75,
+      "categories": {
+        "account": 4,
+        "cancellations": 5,
+        "clarification": 8,
+        "complaints": 4,
+        "general_faq": 6,
+        "order_status": 7,
+        "out_of_scope": 7,
+        "payments": 6,
+        "product_info": 5,
+        "refunds": 6,
+        "returns": 6,
+        "shipping": 6,
+        "warranty": 5
+      }
+    },
+    "test": {
+      "count": 75,
+      "categories": {
+        "account": 4,
+        "cancellations": 5,
+        "clarification": 8,
+        "complaints": 4,
+        "general_faq": 6,
+        "order_status": 7,
+        "out_of_scope": 7,
+        "payments": 6,
+        "product_info": 5,
+        "refunds": 6,
+        "returns": 6,
+        "shipping": 6,
+        "warranty": 5
+      }
+    }
+  },
+  "category_distribution": {
+    "order_status": {
+      "train": 56,
+      "validation": 7,
+      "test": 7,
+      "total": 70
+    },
+    "shipping": {
+      "train": 57,
+      "validation": 6,
+      "test": 6,
+      "total": 69
+    },
+    "returns": {
+      "train": 55,
+      "validation": 6,
+      "test": 6,
+      "total": 67
+    },
+    "refunds": {
+      "train": 52,
+      "validation": 6,
+      "test": 6,
+      "total": 64
+    },
+    "payments": {
+      "train": 48,
+      "validation": 6,
+      "test": 6,
+      "total": 60
+    },
+    "cancellations": {
+      "train": 44,
+      "validation": 5,
+      "test": 5,
+      "total": 54
+    },
+    "product_info": {
+      "train": 45,
+      "validation": 5,
+      "test": 5,
+      "total": 55
+    },
+    "warranty": {
+      "train": 40,
+      "validation": 5,
+      "test": 5,
+      "total": 50
+    },
+    "account": {
+      "train": 41,
+      "validation": 4,
+      "test": 4,
+      "total": 49
+    },
+    "complaints": {
+      "train": 35,
+      "validation": 4,
+      "test": 4,
+      "total": 43
+    },
+    "general_faq": {
+      "train": 48,
+      "validation": 6,
+      "test": 6,
+      "total": 60
+    },
+    "clarification": {
+      "train": 69,
+      "validation": 8,
+      "test": 8,
+      "total": 85
+    },
+    "out_of_scope": {
+      "train": 64,
+      "validation": 7,
+      "test": 7,
+      "total": 78
+    }
+  },
+  "length_statistics": {
+    "train": {
+      "user_words": {
+        "count": 654,
+        "min": 4,
+        "median": 9.0,
+        "mean": 9.1,
+        "max": 16
+      },
+      "answer_words": {
+        "count": 654,
+        "min": 11,
+        "median": 30.0,
+        "mean": 29.16,
+        "max": 43
+      },
+      "user_chars": {
+        "count": 654,
+        "min": 18,
+        "median": 51.0,
+        "mean": 51.31,
+        "max": 89
+      },
+      "answer_chars": {
+        "count": 654,
+        "min": 77,
+        "median": 174.0,
+        "mean": 169.56,
+        "max": 267
+      }
+    },
+    "validation": {
+      "user_words": {
+        "count": 75,
+        "min": 5,
+        "median": 9,
+        "mean": 9.19,
+        "max": 15
+      },
+      "answer_words": {
+        "count": 75,
+        "min": 14,
+        "median": 29,
+        "mean": 28.84,
+        "max": 43
+      },
+      "user_chars": {
+        "count": 75,
+        "min": 27,
+        "median": 51,
+        "mean": 51.63,
+        "max": 90
+      },
+      "answer_chars": {
+        "count": 75,
+        "min": 89,
+        "median": 175,
+        "mean": 170.69,
+        "max": 244
+      }
+    },
+    "test": {
+      "user_words": {
+        "count": 75,
+        "min": 4,
+        "median": 9,
+        "mean": 8.92,
+        "max": 15
+      },
+      "answer_words": {
+        "count": 75,
+        "min": 14,
+        "median": 29,
+        "mean": 28.92,
+        "max": 41
+      },
+      "user_chars": {
+        "count": 75,
+        "min": 25,
+        "median": 49,
+        "mean": 50.31,
+        "max": 82
+      },
+      "answer_chars": {
+        "count": 75,
+        "min": 77,
+        "median": 170,
+        "mean": 168.57,
+        "max": 251
+      }
+    }
+  },
+  "leakage_checks": {
+    "near_duplicate_threshold": 0.92,
+    "id_overlap": {
+      "train_validation": [],
+      "train_test": [],
+      "validation_test": []
+    },
+    "exact_user_text_overlap": {
+      "train_validation": 0,
+      "train_test": 0,
+      "validation_test": 0
+    },
+    "near_duplicate_cross_split_pairs": {
+      "train_validation": 0,
+      "train_test": 0,
+      "validation_test": 0
+    },
+    "max_cross_split_jaccard": 0.8889,
+    "passed": true
+  },
+  "cleaning": {
+    "input_records": 820,
+    "invalid_records": 0,
+    "duplicate_ids": 0,
+    "exact_duplicates": 0,
+    "near_duplicates": 16,
+    "kept_records": 804,
+    "near_duplicate_threshold": 0.9,
+    "invalid_examples": [],
+    "parse_errors": 0,
+    "parse_error_examples": [],
+    "input_file": "data\\raw\\shopease_raw.jsonl",
+    "output_file": "data\\processed\\shopease_clean.jsonl"
+  }
+}

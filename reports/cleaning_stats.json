@@ -1,0 +1,14 @@
+{
+  "input_records": 820,
+  "invalid_records": 0,
+  "duplicate_ids": 0,
+  "exact_duplicates": 0,
+  "near_duplicates": 16,
+  "kept_records": 804,
+  "near_duplicate_threshold": 0.9,
+  "invalid_examples": [],
+  "parse_errors": 0,
+  "parse_error_examples": [],
+  "input_file": "data\\raw\\shopease_raw.jsonl",
+  "output_file": "data\\processed\\shopease_clean.jsonl"
+}
